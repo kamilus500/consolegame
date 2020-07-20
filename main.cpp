@@ -58,6 +58,7 @@ char** action(char** plansza, int& z, int& c, int& n, int& m, int& ilosc)
 		z -= 1;
 		if (z == n && c == m)
 		{
+			ilosc-=1;
 			pkt += 1;
 			plansza[z][c] = '@';
 			plansza[z - 1][c] = '.';
@@ -72,6 +73,7 @@ char** action(char** plansza, int& z, int& c, int& n, int& m, int& ilosc)
 		z += 1;
 		if (z == n && c == m)
 		{
+			ilosc-=1;
 			pkt += 1;
 			plansza[z][c] = '@';
 			plansza[z + 1][c] = '.';
@@ -86,6 +88,7 @@ char** action(char** plansza, int& z, int& c, int& n, int& m, int& ilosc)
 		c -= 1;
 		if (z == n && c == m)
 		{
+			ilosc-=1;
 			pkt += 1;
 			plansza[z][c] = '@';
 			plansza[z][c - 1] = '.';
@@ -100,6 +103,7 @@ char** action(char** plansza, int& z, int& c, int& n, int& m, int& ilosc)
 		c += 1;
 		if (z == n && c == m)
 		{
+			ilosc-=1;
 			pkt += 1;
 			plansza[z][c] = '@';
 			plansza[z][c + 1] = '.';
